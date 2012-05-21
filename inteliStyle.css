@@ -34,7 +34,7 @@ a:active {
 }
 
 a:hover {
-	text-decoration: none;
+	text-decoration: underline;
 	outline: 0;
 }
 
@@ -777,9 +777,7 @@ span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
 
 ul > ul.lis_ani{
 	list-style: none;
-	display: block;
 }
-
 
 /* Inline binomials */
 span.binom {

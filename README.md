@@ -1,4 +1,0 @@
-intelinetdocs
-=============
-
-Documentation for Intelinet

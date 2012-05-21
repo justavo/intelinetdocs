@@ -394,6 +394,10 @@ A widget is a small application embedded in a web page, end-users can execute
 \begin_layout Standard
 Double click the buttons to pop them up in a new window, one or more widgets
  can be visualized at the same time.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -411,6 +415,10 @@ Timeline
 	filename Images/timelineWindow.png
 	scale 70
 
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -451,6 +459,10 @@ Map
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -458,6 +470,10 @@ Map widget pops up a google map with flags, each flag represents location
  where the document was uploaded.
  Cursor over flag brings out details of that document and double clicking
  it leads you to that result.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -488,7 +504,11 @@ A cluster is a group of objects that are similar between them, that share
 \end_layout
 
 \begin_layout Enumerate
-Click node A, connections with other nodes are remakred.
+Click cluster 
+\series bold
+A
+\series default
+, connections with other nodes are remakred.
 \begin_inset Newline newline
 \end_inset
 
@@ -504,13 +524,29 @@ Click node A, connections with other nodes are remakred.
 \begin_layout Enumerate
 
 \shape italic
-Details
+Detail
 \shape default
- tab, is a list of n connections.
+ tab, is a list clusters connected to cluster 
+\series bold
+A
+\series default
+.
 \end_layout
 
 \begin_layout Enumerate
-Documents tab
+
+\shape italic
+Documents 
+\shape default
+tab, list of documents in cluster 
+\series bold
+A
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*

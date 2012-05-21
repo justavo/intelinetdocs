@@ -218,6 +218,7 @@ span.strong {
 
 /* Figures and Tables */
 img.embedded {
+	float: right;
 	width: 100%;
 	_width: auto;
 }
@@ -328,7 +329,7 @@ hr{
 /* Header */
 h1.title {
 	text-align: center;
-	padding-top: 0;
+	padding-top: 60px;
 }
 
 h2.author {
@@ -775,8 +776,9 @@ span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
 * binomials, vertical braces, stackrel, fonts and colors.
 */
 
-ul > ul.lis_ani > a:hover{
-	background-color: #EEEEEE
+ul > ul.lis_ani > li > a:hover{
+	background-color: #EEEEEE;
+	text-decoration: none;
 }
 ul > ul.lis_ani {
 	list-style: none;
@@ -1030,13 +1032,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
-#globalWrapper {
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
-	background: #ffffff;
-	line-height: 1.5em;
-}
+
 span.FootOuter .Foot {
 	display: block;
 	position: relative;

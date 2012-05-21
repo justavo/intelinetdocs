@@ -1,0 +1,1771 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename Images/INTELINET.jpg
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+iNtelinet
+\end_layout
+
+\begin_layout Title
+Administration Guide
+\end_layout
+
+\begin_layout Standard
+This is an administration guide that teaches you how to perform administrative
+ tasks for iNtelinet.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+The iNtelinet configuration files
+\end_layout
+
+\begin_layout Standard
+Note: Ellipses (...) indicate where attribute values or content have been omitted/
+ represent values to modify/-
+\begin_inset Newline newline
+\end_inset
+
+
+\shape slanted
+orion
+\shape default
+= refers to ___ in the Configuration guide, section_____.
+\begin_inset Newline newline
+\end_inset
+
+
+\shape slanted
+alfa
+\shape default
+=
+\end_layout
+
+\begin_layout Section*
+Application
+\end_layout
+
+\begin_layout Subsection*
+Web (Session lifetime)
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Path: .../intelinet/WEB-INF/
+\begin_inset Newline newline
+\end_inset
+
+File: web.xml
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When using iNtelinet and iConsole you may need to increase or decrease session
+ lifetime, time a session lasts without action.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,tabsize=5"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<session-config>
+\end_layout
+
+\begin_layout Plain Layout
+
+   <session-timeout>5</session-timeout> 
+\end_layout
+
+\begin_layout Plain Layout
+
+</session-config>
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+Solr 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Path: .../intelinet/WEB-INF/
+\begin_inset Newline newline
+\end_inset
+
+File: solr.properties
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Solr Overview
+\end_layout
+
+\begin_layout Standard
+iNtelinet uses a fast enterprise search platform, Solr, to index information.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://lucene.apache.org/solr/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+solr.ceigep-solr={protocol}://{domain/host}:{port}/solr
+\end_layout
+
+\begin_layout Subsection*
+Topic Classifier
+\end_layout
+
+\begin_layout Standard
+Indexing documents
+\end_layout
+
+\begin_layout Subsection*
+Data Input Handlers
+\end_layout
+
+\begin_layout Subsubsection*
+Transformers 
+\end_layout
+
+\begin_layout Subsection*
+schema.xml
+\end_layout
+
+\begin_layout Subsection*
+solrconfig.xml
+\end_layout
+
+\begin_layout Subsection*
+Managing Sources
+\end_layout
+
+\begin_layout Standard
+A main administrator task is to regularly update sources, meaning adding
+ or removing them.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\series bold
+A
+\series default
+ be the acronym of the new source 
+\series bold
+S
+\series default
+ that we want to add.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\series bold
+T
+\series default
+ be the type of 
+\series bold
+S
+\series default
+.
+ Currently 
+\shape slanted
+\color green
+we only support adding sources of two types of documents
+\shape default
+\color inherit
+: 
+\shape slanted
+\color green
+
+\begin_inset Quotes eld
+\end_inset
+
+mm
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+public
+\begin_inset Quotes erd
+\end_inset
+
+,
+\shape default
+\color inherit
+ “db” and “fs”, which means database and filesystem respectively.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\series bold
+P 
+\series default
+be the path for executing the import handler REST service for ingestion
+ of 
+\series bold
+S
+\series default
+-documents.
+ We recommend to include in the path 
+\series bold
+A
+\series default
+ at some part of it.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Edit 
+\shape italic
+solrconfig.xml
+\shape default
+ and add the following lines.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+lstparams "breaklines=true,language=HTML,showspaces=true,tabsize=1"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<requestHandler name="/P" class="org.apache.solr.handler.dataimport.DataImportHandler
+"> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   <lst name="defaults"> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   <str name="config">data-config-A.xml</str> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   <str name="update.chain">uima</str> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   </lst> 
+\end_layout
+
+\begin_layout Plain Layout
+
+</requestHandler>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Create a file in the conf directory of the current solr home named “data-config-
+\series bold
+A
+\series default
+.xml”.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If T==”fs” then the content of data-config-A.xml file follows: 
+\begin_inset listings
+lstparams "breaklines=true,language=XML,showspaces=true,showstringspaces=false,tabsize=1"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<dataConfig> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   <dataSource type="FileDataSource" /> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   <document> 
+\end_layout
+
+\begin_layout Plain Layout
+
+      <entity 
+\end_layout
+
+\begin_layout Plain Layout
+
+         name="A"
+\end_layout
+
+\begin_layout Plain Layout
+
+         processor="FileListEntityProcessor" 		
+\end_layout
+
+\begin_layout Plain Layout
+
+         baseDir="/opt/intelinet/d_content/A"
+\end_layout
+
+\begin_layout Plain Layout
+
+         processedDir="/opt/intelinet/d_processedContent/A"
+\end_layout
+
+\begin_layout Plain Layout
+
+         CMISUrl="http://192.168.100.176:8080/icmis/service/alfresco/iupload"
+\end_layout
+
+\begin_layout Plain Layout
+
+         classifierConfPath="/opt/intelinet/solr/puebla-solr-1.1.3-SNAPSHOT/conf/t
+opic-classifier.yaml"
+\end_layout
+
+\begin_layout Plain Layout
+
+         fileName=".*"
+\end_layout
+
+\begin_layout Plain Layout
+
+         recursive="false"
+\end_layout
+
+\begin_layout Plain Layout
+
+         rootEntity="true"
+\end_layout
+
+\begin_layout Plain Layout
+
+         transformer="mx.com.consistent.intelinet.transformer.FileTransformer,
+ mx.com.consistent.intelinet.transformer.TopicClassifierTransformer"> 
+\end_layout
+
+\begin_layout Plain Layout
+
+      </entity>
+\end_layout
+
+\begin_layout Plain Layout
+
+   </document> 
+\end_layout
+
+\begin_layout Plain Layout
+
+</dataConfig> 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Be sure that both “baseDir” and “processedDir” values (which are filesystem
+ paths) in the previous file exist in orion (192.168.100.175).
+ Create them as needed.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Reload /solr context in tomcat or restart tomcat, so changes can be taken.
+ 
+\end_layout
+
+\begin_layout Enumerate
+An image should be prepared to be/as the icon which will represent 
+\series bold
+S
+\series default
+ withint the system.
+ 16x16 px Add this file to 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$inteliwebhomesystem/resources/img/icons/
+\end_layout
+
+\end_inset
+
+ directory in alfa (192.168.100.176) 
+\end_layout
+
+\begin_layout Enumerate
+Use this couple of URLs for adding and deleting sources in the database
+ that is used by iconsole web application.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Delete URL: /iconsole/adm/src/del/{src} 
+\begin_inset Newline newline
+\end_inset
+
+Add URL: /iconsole/adm/src/del/{src=}
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Parameters (mandatory):
+\begin_inset Newline newline
+\end_inset
+
+type=[db,fs,public,mm,...]
+\begin_inset Newline newline
+\end_inset
+
+desc=
+\begin_inset Newline newline
+\end_inset
+
+uid= Admin user id
+\begin_inset Newline newline
+\end_inset
+
+pwd=
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Enter to the 
+\begin_inset CommandInset href
+LatexCommand href
+name "iConsole"
+target "iConsole.html"
+type "file:"
+
+\end_inset
+
+ 
+\shape italic
+https://intelinetgep.no-ip.biz/iconsole
+\shape default
+ with an admin user (iadm/31dm) user for adding 
+\series bold
+S
+\series default
+ to an existing role or create a new role 
+\series bold
+R
+\series default
+ within iconsole and then assign 
+\series bold
+S
+\series default
+ to 
+\series bold
+R
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,language=XML,showspaces=true,showstringspaces=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<dataConfig> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   <dataSource
+\end_layout
+
+\begin_layout Plain Layout
+
+      driver="net.sourceforge.jtds.jdbc.Driver"
+\end_layout
+
+\begin_layout Plain Layout
+
+      url="jdbc:jtds:sqlserver://192.168.100.150:1433/db_cap"
+\end_layout
+
+\begin_layout Plain Layout
+
+      user="capuser" password="password" />
+\end_layout
+
+\begin_layout Plain Layout
+
+      <document>
+\end_layout
+
+\begin_layout Plain Layout
+
+         <entity name="MIE" 
+\end_layout
+
+\begin_layout Plain Layout
+
+            transformer="ClobTransformer, TemplateTransformer, RegexTransformer,
+ mx.com.consistent.intelinet.transformer.TopicClassifierTransformer"
+\end_layout
+
+\begin_layout Plain Layout
+
+            classifierConfPath="${solr.path}/conf/topic-classifier.yaml"
+\end_layout
+
+\begin_layout Plain Layout
+
+            query="SELECT [v_analisis_estrategico].* FROM [dbo].[v_analisis_estrat
+egico] [v_analisis_estrategico]"
+\end_layout
+
+\begin_layout Plain Layout
+
+            deltaImportQuery="SELECT [v_analisis_estrategico].* FROM [dbo].[v_anal
+isis_estrategico] [v_analisis_estrategico] WHERE [v_analisis_estrategico].ae_id
+ = '${dataimporter.delta.id}'"
+\end_layout
+
+\begin_layout Plain Layout
+
+            deltaQuery="SELECT [v_analisis_estrategico].ae_id FROM [dbo].[v_analis
+is_estrategico] [v_analisis_estrategico] WHERE [v_analisis_estrategico].sys_fec_u
+pdate &gt; '${dataimporter.last_index_time}'"
+\end_layout
+
+\begin_layout Plain Layout
+
+            dateFormat="dd/MM/yyyy HH:mm"
+\end_layout
+
+\begin_layout Plain Layout
+
+            pk="ae_id"
+\end_layout
+
+\begin_layout Plain Layout
+
+            classifFilter="false"
+\end_layout
+
+\begin_layout Plain Layout
+
+            entity-mapping="true"
+\end_layout
+
+\begin_layout Plain Layout
+
+            entity-date="ae_fecha"
+\end_layout
+
+\begin_layout Plain Layout
+
+            entity-id_str="ae_id"
+\end_layout
+
+\begin_layout Plain Layout
+
+            entity-name="ae_acontecimiento"
+\end_layout
+
+\begin_layout Plain Layout
+
+            entity-content="ae_situacion"> 
+\end_layout
+
+\begin_layout Plain Layout
+
+            <field column="ae_id" name="id_str" /> 
+\end_layout
+
+\begin_layout Plain Layout
+
+            <field column="ae_fecha" name="date" /> 
+\end_layout
+
+\begin_layout Plain Layout
+
+            <field column="ae_acontecimiento" name="name" /> 
+\end_layout
+
+\begin_layout Plain Layout
+
+            <field column="ae_situacion" name="content" clob="true" />
+\end_layout
+
+\begin_layout Plain Layout
+
+            <field column="topics" splitBy="
+\backslash
+|" sourceColName="tema" />
+\end_layout
+
+\begin_layout Plain Layout
+
+            <field column="type" template="MIE" />
+\end_layout
+
+\begin_layout Plain Layout
+
+            <field column="source" template="db" />
+\end_layout
+
+\begin_layout Plain Layout
+
+      </entity> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   </document> 
+\end_layout
+
+\begin_layout Plain Layout
+
+</dataConfig>
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If added source type is DB a couple of extra steps are needed.
+\end_layout
+
+\begin_layout Enumerate
+Define Datasource using class defined, it is mandatory to have an id.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+lstparams "breaklines=true,language=XML,tabsize=5"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<bean id="{src}DS" class="mx.com.consistent.intelinet.server.business.db.datasource.Gene
+ricPooledDataSource">
+\end_layout
+
+\begin_layout Plain Layout
+
+   <constructor-arg name="jdbcURL" value="jdbc:{...}://{host/ip}:{ip}/{db}..."
+ />
+\end_layout
+
+\begin_layout Plain Layout
+
+   <constructor-arg name="driverClass" value="{driver class}" />
+\end_layout
+
+\begin_layout Plain Layout
+
+   <constructor-arg name="username" value="..."/>
+\end_layout
+
+\begin_layout Plain Layout
+
+   <constructor-arg name="password" value="..."/>
+\end_layout
+
+\begin_layout Plain Layout
+
+   <property name="query" value="SELECT {columns} FROM {table} WHERE {column
+ = ?, 	column2 = ?, ..., columnN = ?}" /> 
+\end_layout
+
+\begin_layout Plain Layout
+
+</bean>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set new source Entry key of the new source in the map that relates sources
+ with database access to get that source
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+lstparams "breaklines=true,showspaces=true,tabsize=5"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<util:map id="intelinetDS" map-class="java.util.HashMap" key-type="java.lang.String"
+\end_layout
+
+\begin_layout Plain Layout
+
+value-type="mx.com.consistent.rest.business.db.datasource.GenericPooledDataSuource">
+\end_layout
+
+\begin_layout Plain Layout
+
+   <entry key="{src}" value-ref="{src}DS" />
+\end_layout
+
+\begin_layout Plain Layout
+
+</util:map>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Managing Diagnostic Log Files
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Path: .../intelinet/WEB-INF/classes/log4j.xml
+\begin_inset Newline newline
+\end_inset
+
+File: log4j.xml
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Logging Overview
+\end_layout
+
+\begin_layout Standard
+iNtelinet generates log files that record certain types of events related
+ to users sessions.
+ Logs are cleaned up daily.
+\end_layout
+
+\begin_layout Subsection*
+Viewing Log Messages
+\end_layout
+
+\begin_layout Description
+iNteliWebAccess
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+[DD-MM-YYYY HH:MM:SS] [Log level] - [username@0.0.0.0@][Roles] > [Session Timeout]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Example:
+\begin_inset Newline newline
+\end_inset
+
+[10-05-2012 14:35:54] [INFO] - [itest@192.168.0.103][ROLE_DIRECTOR, ROLE_OPERADOR6]
+ > [Session Timeout]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+iNteliWebQuery
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+[DD-MM-YYYY HH:MM:SS] [INFO] - [1][itest@0.0.0.0@[ROLE1,...
+ ROLEN]]>[/intelinet/services/solrService]-[?:security - [TE, SI, IC, MM,
+ TWITTER, FIO, MIE, FIP, RSS]|324|Authorized]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Example:
+\begin_inset Newline newline
+\end_inset
+
+[Date-Time] [Log level] - [SessionID][username@0.0.0.0@[Roles assigned to username]
+]>[Requested Solr service]-[?:Keyword in Search Box - [Checked Sources]|Response
+ time(miliseconds)|Authorized query for user]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+iNteliWebDownloads
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+[DD-MM-YYYY HH:MM:SS] [Log level] - Message
+\end_layout
+
+\begin_layout Plain Layout
+Example:
+\begin_inset Newline newline
+\end_inset
+
+[02-05-2012 12:21:21] [INFO] - Hash not found
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Searching Log Files
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Log category
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Function
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Path
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Access
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Archive to record expired sessions, log outs, successful logins, unsuccessful
+ logins and cause.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.../opt/intelinet/logs/log4Intelinet-acces.log
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Queries
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Record of queries accomplished by users through iNtelinet.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.../opt/intelinet/logs/log4Intelinet-query.log
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Downloads
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A detailed registry of user's queries, downloaded documents (.pdf/.doc/.xls)
+ and granted permissions.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.../opt/intelinet/logs/log4Intelinet-dispatch_audit.log
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Configurating Log Files
+\end_layout
+
+\begin_layout Standard
+You can change the path where 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sub:Appender-InteliWebAccess"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sub:Appender-InteliWebQueries"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sub:Appender-InteliWebDownloads"
+
+\end_inset
+
+ logs are saved.
+ Modify the parameter 
+\series bold
+File
+\series default
+ in log4j.xml, define the absolute path where you desire to store it and
+ the file name.
+ Recommended to keep default log names.
+\end_layout
+
+\begin_layout Subsubsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Appender-InteliWebAccess"
+
+\end_inset
+
+Appender InteliWebAccess
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\large},language=XML,tabsize=5"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<appender name="InteliWebAccess" class="...">
+\end_layout
+
+\begin_layout Plain Layout
+
+   <param name="File" value="/.../log4Intelinet-access.log"/> 
+\end_layout
+
+\begin_layout Plain Layout
+
+..........
+\end_layout
+
+\begin_layout Plain Layout
+
+</appender>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Appender-InteliWebQueries"
+
+\end_inset
+
+Appender InteliWebQueries
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "tabsize=5"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<appender name="InteliWebQueries" class="...">
+\end_layout
+
+\begin_layout Plain Layout
+
+   <param name="File" value="/.../log4Intelinet-query.log"/> 
+\end_layout
+
+\begin_layout Plain Layout
+
+..........
+\end_layout
+
+\begin_layout Plain Layout
+
+</appender>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Appender-InteliWebDownloads"
+
+\end_inset
+
+Appender InteliWebDownloads
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "tabsize=5"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<appender name="InteliWebDownloads" class="...">
+\end_layout
+
+\begin_layout Plain Layout
+
+   <param name="File" value="/.../log4Intelinet-dispatch_audit.log"/> 
+\end_layout
+
+\begin_layout Plain Layout
+
+..........
+\end_layout
+
+\begin_layout Plain Layout
+
+</appender>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Database
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Path: WEB-INF/classes/mx/com/consistent/intelinet/server/properties
+\begin_inset Newline newline
+\end_inset
+
+File: db.properties
+\shape default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can change default iNtelinet DB, this DB is mandatory and handles user
+ permissions.
+\end_layout
+
+\begin_layout Itemize
+DBUsername: mandatory, recommended a read-only user.
+\begin_inset Newline newline
+\end_inset
+
+ db.pg.username=ipgadm
+\end_layout
+
+\begin_layout Itemize
+DBPassword: mandatory
+\begin_inset Newline newline
+\end_inset
+
+ db.pg.password=3pg1dm3n
+\end_layout
+
+\begin_layout Itemize
+Host: 
+\begin_inset Newline newline
+\end_inset
+
+db.pg.host=0.0.0.0
+\end_layout
+
+\begin_layout Itemize
+Port: 
+\begin_inset Newline newline
+\end_inset
+
+db.pg.port=5432
+\end_layout
+
+\begin_layout Itemize
+Database: 
+\begin_inset Newline newline
+\end_inset
+
+db.pg.db=db_name
+\end_layout
+
+\begin_layout Standard
+New Database may not meet iNtelinet's needed structure.
+ In this case iNtelinet will create missing objects therefore user requires
+ enough privileges to do so.
+\end_layout
+
+\begin_layout Subsection*
+intelinet.properties
+\end_layout
+
+\begin_layout Standard
+iNtelinet has a module that works as the middleman application, between
+ iNtelinet and the Document manager, regarding security policies and interoperab
+ility.
+ By default iNtelinet integrates Alfresco cmis (stands for Content Management
+ Interoperability Services).
+ Here you can modify host and response messages, messages seen in 
+\series bold
+\shape italic
+
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sub:Appender-InteliWebDownloads"
+
+\end_inset
+
+
+\series default
+\shape default
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\shape italic
+ iNtelinet cmis can be in a different network node of where iNtelinet is
+ located, in this case we encourage you to encrypt information.
+\end_layout
+
+\begin_layout Itemize
+iNtelinet cmis
+\begin_inset Newline newline
+\end_inset
+
+intelinet.cmis.host=
+\series bold
+...
+
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Response messages
+\begin_inset Newline newline
+\end_inset
+
+
+\shape italic
+intelinet.cmis.co.response.#=
+\series bold
+Message
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Connecting to an LDAP 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Path: WEB-INF/classes/mx/com/consistent/intelinet/server/properties/
+\begin_inset Newline newline
+\end_inset
+
+File: ldap.properties
+\shape default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Viewing LDAP
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/ldapimg.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Configurating LDAP credentials
+\end_layout
+
+\begin_layout Standard
+LDAP stands for Lightweight Data Access Protocol.
+ Inside iNtelinet LDAP stores and administrates roles and users.
+\end_layout
+
+\begin_layout Standard
+iNtelinet's directory 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://directory.apache.org/ "
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+You can modify LDAP credentials
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+LDAP protocol.
+ Switching to ldap
+\shape italic
+s
+\shape default
+ is possible only if certification is registered in the java keystore.
+\begin_inset Newline newline
+\end_inset
+
+dldap.protocol=
+\series bold
+...
+
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+LDAP host.
+ Is recommended to keep iNtelinet and LDAP in the same location, otherwise
+ use ldaps.
+ 
+\begin_inset Newline newline
+\end_inset
+
+ldap.host=
+\series bold
+...
+\end_layout
+
+\begin_layout Itemize
+LDAP port for listening.
+\begin_inset Newline newline
+\end_inset
+
+ldap.port=
+\series bold
+...
+\end_layout
+
+\begin_layout Itemize
+LDAP domain.
+\begin_inset Newline newline
+\end_inset
+
+ldap.base=dc=
+\series bold
+domain component1 value
+\series default
+, dc=
+\series bold
+domain component2 value...
+
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+Organization:
+\begin_inset Newline newline
+\end_inset
+
+intelinet.ldap.org=o=
+\series bold
+...
+\end_layout
+
+\begin_layout Itemize
+Administrator user:
+\begin_inset Newline newline
+\end_inset
+
+intelinet.ldap.person=...
+\end_layout
+
+\begin_layout Itemize
+Groups also named roles:
+\begin_inset Newline newline
+\end_inset
+
+intelinet.ldap.groups=ou=
+\series bold
+...
+\series default
+, ${intelinet.ldap.org}
+\end_layout
+
+\begin_layout Itemize
+Users
+\begin_inset Newline newline
+\end_inset
+
+intelinet.ldap.users=ou=
+\series bold
+...
+\series default
+,${intelinet.ldap.org}
+\end_layout
+
+\begin_layout Itemize
+Persons(Enabled/Disabled)
+\end_layout
+
+\begin_layout Itemize
+User ID:
+\begin_inset Newline newline
+\end_inset
+
+intelinet.ldap.manager=uid=
+\series bold
+...
+\end_layout
+
+\begin_layout Itemize
+Password:
+\begin_inset Newline newline
+\end_inset
+
+intelinet.ldap.manager.password=
+\series bold
+...
+\end_layout
+
+\begin_layout Itemize
+Encrypted password with SHA Secure Hash Algorithm, SHA1 by default:
+\begin_inset Newline newline
+\end_inset
+
+intelinet.ldap.manager.password.SSHA=
+\series bold
+...
+\end_layout
+
+\begin_layout Itemize
+Hexadecimal encrypted password:
+\begin_inset Newline newline
+\end_inset
+
+intelinet.ldap.manager.password.HEX=
+\series bold
+...
+
+\series default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Administrator user is organization direct child.
+ Default level can be changed, for proper addressing ldap.manager should
+ be complete path, subsequent to organization level.
+\begin_inset Newline newline
+\end_inset
+
+Two types of administrators
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+For iNtelinet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Read only
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+For iConsole
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Read and write privileges
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

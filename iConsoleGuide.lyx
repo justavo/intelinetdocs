@@ -1,0 +1,989 @@
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename Images/INTELINET.jpg
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+iNtelinet
+\end_layout
+
+\begin_layout Title
+iConsole
+\end_layout
+
+\begin_layout Standard
+iConsole users can manage 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Account"
+
+\end_inset
+
+ settings and 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:AddData"
+
+\end_inset
+
+ , with left side menu it is simple to do.
+ Admin users, those with IADMIN role, additionally administrate 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:UserManagement"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Roles"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand nameref
+reference "sec:Sources"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+\shape smallcaps
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Account"
+
+\end_inset
+
+
+\shape default
+Account
+\end_layout
+
+\begin_layout Standard
+Account properties such as password and e-mail can be updated by users.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Change Password
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Change Password
+\series default
+ from the iConsole Menu.
+\end_layout
+
+\begin_layout Enumerate
+Register password information.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Current password 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+New password 
+\series default
+and
+\series bold
+ confirm.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Click <<Save>>.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+Note: Password requires at least 8 characters.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Change E-mail
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Change Email
+\series default
+ from the iConsole Menu.
+\end_layout
+
+\begin_layout Enumerate
+Register e-mail information
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Password
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+New e-mail 
+\series default
+and
+\series bold
+ confirm
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Click <<Save>>.
+\end_layout
+
+\begin_layout Section*
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:UserManagement"
+
+\end_inset
+
+Users
+\end_layout
+
+\begin_layout Standard
+Set of concessions to consume the Intelinet and iConsole resources.
+ Users may have a role or role but if none of these has sources user won't
+ be able to log into Intelinet.
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "CreateUseriConsole"
+
+\end_inset
+
+
+\color black
+Create User 
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Create User
+\series default
+ from the iConsole.
+\end_layout
+
+\begin_layout Enumerate
+Register user's information:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+User
+\series default
+ must be unique, only alphanumeric and underscore characters allowed.
+ This is the end user's login name.
+ Automatically converted to lowercase.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+First Name
+\series default
+ mandatory.
+ Automatically converts the first letter to uppercase.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Last Name 
+\series default
+mandatory.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Mail
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Status
+\series default
+ enabled or disabled, when enabled a mail will be sent with user credentials,
+ if disabled an activation mail.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Roles 
+\series default
+are necessary to feed the Intelinet search, minimum one role required.
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Authorized sources
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Available sources
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Roles to attach to the new user
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Roles available
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Click <<Save>> to finish registration.
+\end_layout
+
+\begin_layout Subparagraph
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Disabled users can't log into Intelinet until the activation process is
+ complete.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "ListUsers/EditRoles"
+
+\end_inset
+
+
+\color black
+List Users/Edit Roles
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+List Users
+\series default
+ from the iConsole Menu.
+\end_layout
+
+\begin_layout Enumerate
+All users are listed alphabetically, and can be filtered by status (automaticall
+y) and/or keyword registered in the search box and click <<Search>>.
+\end_layout
+
+\begin_layout Enumerate
+Click 
+\begin_inset Graphics
+	filename Images/edit.png
+	scale 120
+
+\end_inset
+
+to edit roles related to the selected user.
+\end_layout
+
+\begin_layout Enumerate
+Edit Assigned roles and click <<Save>>.
+\end_layout
+
+\begin_layout Standard
+Click 
+\begin_inset Graphics
+	filename Images/broom.png
+	scale 80
+
+\end_inset
+
+ to reset search parameters.
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "EnableUsers"
+
+\end_inset
+
+
+\color black
+Enable Users 
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Enable Users
+\series default
+ from the iConsole Menu.
+\end_layout
+
+\begin_layout Enumerate
+Disabled users are listed, check those you want to enable.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Click <<Enable>> button, confirm.
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "DisableUsers"
+
+\end_inset
+
+
+\color black
+Disable Users
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Disable User
+\series default
+ from the iConsole Menu.
+\end_layout
+
+\begin_layout Enumerate
+Enabled users are listed, check those you want to disable.
+\end_layout
+
+\begin_layout Enumerate
+Click <<Disable>> button, confirm.
+\end_layout
+
+\begin_layout Standard
+Note: Logged user cannot disable himself and will not appear on the list.
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "SendActivationMail"
+
+\end_inset
+
+
+\color black
+Send activation mail
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Send activation mail
+\series default
+ from the iConsole Menu.
+\end_layout
+
+\begin_layout Enumerate
+Disabled new users are listed, check those you want to activate.
+\end_layout
+
+\begin_layout Enumerate
+Click <<Send e-mail>> button, confirm.
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "DeleteUser"
+
+\end_inset
+
+
+\color black
+Delete Users
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Delete Users
+\series default
+ from the iConsole Menu.
+\end_layout
+
+\begin_layout Enumerate
+All users are listed, check those to be deleted.
+\end_layout
+
+\begin_layout Enumerate
+Click the <<Delete>> button, confirm.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Note: A logged user cannot delete himself and will not appear on the list.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Roles"
+
+\end_inset
+
+Roles
+\end_layout
+
+\begin_layout Standard
+Set of information sources available for a search.
+\end_layout
+
+\begin_layout Subsection*
+Create Role
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Create Role
+\series default
+ from the iConsole menu.
+\end_layout
+
+\begin_layout Enumerate
+Register role's information
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Role name 
+\series default
+automatically converted to lowercase.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sources
+\series default
+ relate one or more sources to the new role,optional.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\shape italic
+Authorized Sources
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\shape italic
+Available Sources
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sources to relate to the new role.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+List of all roles available for the new role.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Click <<Save>>.
+\end_layout
+
+\begin_layout Subsection*
+List Roles
+\end_layout
+
+\begin_layout Standard
+Select 
+\series bold
+List Roles
+\series default
+ from the iConsole Menu to view all users alphabetically.
+ This grid contains the following features:
+\end_layout
+
+\begin_layout Itemize
+Click 
+\begin_inset Graphics
+	filename Images/edit.png
+
+\end_inset
+
+ to grant or revoke information sources.
+ Sources in the 
+\shape italic
+Authorized Sources
+\shape default
+ list will be available when selected role be assigned.y 
+\end_layout
+
+\begin_layout Itemize
+Click 
+\begin_inset Graphics
+	filename Images/delete.png
+
+\end_inset
+
+to eliminate role, this operation also removes any former user-role relation,
+ confirm.
+\begin_inset Newline newline
+\end_inset
+
+Roles that may leave at least one orphan user, won't be deleted.
+\end_layout
+
+\begin_layout Itemize
+Click 
+\begin_inset Graphics
+	filename Images/users.png
+
+\end_inset
+
+ to list all users that have assigned the selected role.
+ (Read only)
+\end_layout
+
+\begin_layout Itemize
+Click 
+\begin_inset Graphics
+	filename Images/sources.png
+
+\end_inset
+
+ to list all sources attached to the selected role.
+ (Read only)
+\end_layout
+
+\begin_layout Section*
+
+\shape smallcaps
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Sources"
+
+\end_inset
+
+
+\shape default
+Sources
+\end_layout
+
+\begin_layout Standard
+Set of validated information sources that feed a search.
+\end_layout
+
+\begin_layout Subsection*
+List Sources
+\end_layout
+
+\begin_layout Standard
+Select 
+\series bold
+List Sources
+\series default
+ from the iConsole Menu to view all roles alphabetically ordered.
+ 
+\end_layout
+
+\begin_layout Itemize
+Click 
+\begin_inset Graphics
+	filename Images/enable.png
+
+\end_inset
+
+ to enable selected source, confirm.
+\end_layout
+
+\begin_layout Itemize
+Click 
+\begin_inset Graphics
+	filename Images/disable.png
+
+\end_inset
+
+ to disable selected source, confirm.
+\end_layout
+
+\begin_layout Itemize
+Click
+\begin_inset Graphics
+	filename Images/roles.png
+
+\end_inset
+
+to list all related roles of the selected source.
+ (Read only)
+\end_layout
+
+\begin_layout Section*
+
+\shape smallcaps
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:AddData"
+
+\end_inset
+
+
+\shape default
+Add Data
+\end_layout
+
+\begin_layout Standard
+Users are authorized to upload archives for their enabled sources.
+\end_layout
+
+\begin_layout Enumerate
+Select 
+\series bold
+Add Data
+\series default
+ from the iConsole Menu.
+\end_layout
+
+\begin_layout Enumerate
+Register archives information
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Select 
+\series bold
+information type
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Click 
+\begin_inset Graphics
+	filename Images/addArchive.png
+
+\end_inset
+
+ and choose archive.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Archive description
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Click <<Save>>.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+Archives have no size or type restriction.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Return to 
+\begin_inset CommandInset href
+LatexCommand href
+target "UsersGuide.html"
+type "file:"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

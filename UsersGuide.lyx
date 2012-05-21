@@ -1,0 +1,580 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\branch User
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename Images/INTELINET.jpg
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+iNtelinet
+\end_layout
+
+\begin_layout Title
+User's Guide
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\shape italic
+\size large
+Welcome to Intelinet
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\shape italic
+Intelinet
+\series default
+\shape default
+ is a search engine that allows you to define search criteria, information
+ sources and views.
+
+\series bold
+\shape italic
+ Intelinet
+\series default
+\shape default
+ presents relevant information within the last 24 hours in the 
+\shape italic
+iDashboard,
+\shape default
+ helping you to take better and faster decisions.
+\end_layout
+
+\begin_layout Standard
+This chapter describes the web-based interface provided by iNtelinet for
+ queries
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+What you need to get started with iNtelinet
+\end_layout
+
+\begin_layout Itemize
+Active 
+\series bold
+User
+\series default
+ and 
+\series bold
+password.
+\end_layout
+
+\begin_layout Itemize
+Browser Internet Explorer 6.0 or further.
+\end_layout
+
+\begin_layout Itemize
+Network access where iNtelinet is installed.
+\end_layout
+
+\begin_layout Subsection*
+Logging in to iNtelinet
+\end_layout
+
+\begin_layout Standard
+Account created by an administrator and subsequent activation.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On the log-in page, enter the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Field
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Do
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Username
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Enter your active user name.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Password
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Use password sent to your email or the updated one in the iConsole.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Intelinet search
+\end_layout
+
+\begin_layout Standard
+iNtelinet is a search enginge that explores for a keyword in all the documents
+ of enabled sources, results can be filtered by certain topics and ordered
+ by date and relevance.
+\end_layout
+
+\begin_layout Standard
+Steps:
+\end_layout
+
+\begin_layout Enumerate
+Capture a keyword in the search box, mandatory.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/searchBox.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Check out sources below search box.
+\end_layout
+
+\begin_layout Enumerate
+Click <<Search>>.
+\end_layout
+
+\begin_layout Enumerate
+Filter results by clicking the topics of your concern, optional.
+\end_layout
+
+\begin_layout Enumerate
+Order results by Date or Relevance on the upper combo.
+\end_layout
+
+\begin_layout Enumerate
+Results appear on the right side of your workspace, these can be ordered
+ by date and relevance.
+\end_layout
+
+\begin_layout Subsection*
+Information sources
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/checkSources.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Checked sources will feed your intelisearch.
+\end_layout
+
+\begin_layout Standard
+Unchecked sources can be enabled in any moment, but it's necessary to reload
+ your search after this update.
+\end_layout
+
+\begin_layout Subsection*
+Filters
+\end_layout
+
+\begin_layout Standard
+Filters allow you to filter specific topics by searching in results associated
+ to the keyword.
+ iNtelinet offers different filters, located on the left side of your working
+ space, beneath each topic subtopics are displayed.
+ Next to each subtopic a number represents how many documents are available
+ for it.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/subtopic.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Clicking on subtopics will refine search, results will be updated with the
+ new parameters.
+ These parameters appear under the search box for you to keep track.
+\end_layout
+
+\begin_layout Subsection*
+Widgets
+\end_layout
+
+\begin_layout Standard
+A widget is a small application embedded in a web page, end-users can execute
+ them.
+ iNtelinet offers 4 different widgets to view results: Time line, Maps,
+ Cluster and Grid.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/widgetsButtons.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Double click the buttons to pop them up in a new window, one or more widgets
+ can be visualized at the same time.
+\end_layout
+
+\begin_layout Subsubsection*
+Timeline 
+\begin_inset Graphics
+	filename Images/timelineButton.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/timelineWindow.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Timeline is a graphic where results are displayed in chronological order.
+ Date in which a document was uploaded is the point of comparison to display
+ results in the graphic, Year/Month/Day/Hour.
+ With zoom buttons 
+\begin_inset Graphics
+	filename Images/timelineZoom.png
+
+\end_inset
+
+ or third mouse button scale can be modified.
+\end_layout
+
+\begin_layout Standard
+On the upper right corner the count of results that appear on the timeline
+ (blue points on workspace) and results out of it.
+\end_layout
+
+\begin_layout Subsubsection*
+Map 
+\begin_inset Graphics
+	filename Images/mapButton.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Images/mapWindow.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Map widget pops up a google map with flags, each flag represents location
+ where the document was uploaded.
+ Cursor over flag brings out details of that document and double clicking
+ it leads you to that result.
+\end_layout
+
+\begin_layout Subsubsection*
+Cluster 
+\begin_inset Graphics
+	filename Images/clusterButton.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Graphics
+	filename Images/clusterWindow.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A cluster is a group of objects that are similar between them, that share
+ certain characteristics.
+ Graphic is conformed by nodes and lines, nodes represent clusters and lines
+ connections between nodes.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Click node A, connections with other nodes are remakred.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/clickNode.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+Details
+\shape default
+ tab, is a list of n connections.
+\end_layout
+
+\begin_layout Enumerate
+Documents tab
+\end_layout
+
+\begin_layout Subsubsection*
+Grid 
+\begin_inset Graphics
+	filename Images/reticularButton.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+After double clicking <<Reticular>> filter parameters are requested, subtopics
+ list appear and may be checked if you want to include them in view.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/reticulaFilters.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Once paremeters are selected new window pops up, a graph appears on the
+ right side.
+ Graphs are composed by two elements: nodes and lines.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Node: For each subtopic checked a node is drawn.
+\end_layout
+
+\begin_layout Itemize
+Line: Symbolize documents that match both parameters, nodes.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+iDashboard
+\end_layout
+
+\begin_layout Standard
+All widgets in one.
+ Viewing last 24 hours relevant information from your allowed sources keeps
+ you updated.
+\end_layout
+
+\begin_layout Section*
+\begin_inset CommandInset href
+LatexCommand href
+name "iConsole"
+target "iConsoleGuide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

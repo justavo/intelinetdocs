@@ -17,7 +17,7 @@ body {
 /* Basic styles */
 a {
 	text-decoration: none;
-	background: none;
+	background: none repeat scroll 0 0 transparent;
 }
 
 a:link {
@@ -34,7 +34,7 @@ a:active {
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 	outline: 0;
 }
 
@@ -775,8 +775,12 @@ span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
 * binomials, vertical braces, stackrel, fonts and colors.
 */
 
-ul > ul.lis_ani{
+ul > ul.lis_ani > a:hover{
+	background-color: #EEEEEE
+}
+ul > ul.lis_ani {
 	list-style: none;
+	display: block;
 }
 
 /* Inline binomials */

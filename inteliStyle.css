@@ -1,3 +1,4 @@
+
 body {
 	font: 90% sans-serif;
 	background: #f9f9f9;
@@ -6,44 +7,30 @@ body {
 	padding: 0;
 }
 
-#globalWrapper {
-	margin: 10px ;
-	padding: 10px;
+/*#globalWrapper {
+	margin: 10px 15%;
+	padding: 20px;
 	background: #FFFFFF;
 	line-height: 1.5em;
-	display: block;
-}
+}*/
 
 /* Basic styles */
 a {
 	text-decoration: none;
-	background: none repeat scroll 0 0 transparent;
+	background: none;
 }
-
 a:link {
 	color: #0030c0;
 }
-
 a:visited {
 	color: #603090;
 }
-
 a:active {
 	color: #ffa000;
-	outline: 0;
 }
-
 a:hover {
-	text-decoration: none;
-	outline: 0;
+	text-decoration: underline;
 }
-
-a:focus{
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
 h1 {
 	margin-top: 1em;
 	line-height: 1.5em;
@@ -170,9 +157,9 @@ h1.biblio {
 span.greyedout {
 	color: #808080;
 }
-div.Description, div.List, {
+/*div.Description, div.List, li {
 	margin: 1em 0;
-}
+}*/
 li.nested {
 	list-style-type: none;
 }
@@ -217,24 +204,21 @@ span.strong {
 }
 
 /* Figures and Tables */
+
 img.embedded {
-	float: right;
 	width: 100%;
 	_width: auto;
 }
-
 div.float {
 	margin-top: 1ex;
 	margin-bottom: 1ex;
 	text-align: center;
 }
-
 span.float {
 	margin-top: 1ex;
 	margin-bottom: 1ex;
 	text-align: center;
 }
-
 div.figure {
 	display: inline-block;
 	text-align: left;
@@ -329,32 +313,41 @@ hr{
 /* Header */
 h1.title {
 	text-align: center;
-	padding-top: 60px;
 }
-
 h2.author {
 	text-align: center;
 }
-
 h2.Date {
 	text-align: center;
 }
-
 div.abstract {
 	margin: 1em 3em;
 	text-align: left;
 	font-size: 0.95em;
 }
-
 p.abstract-message {
 	text-align: center;
 	font-weight: bold;
 }
-
+div.tocheader {
+	margin: 1em 0;
+	font-size: large;
+}
 a.toc {
 	color: black;
 }
-
+div.tocindent {
+	padding: 0 0 0 2em;
+}
+div.toc {
+	margin: 0.5em 0;
+	font-size: 0.95em;
+	color: black;
+}
+div.fulltoc {
+	padding: 1em;
+	color: black;
+}
 div.warning {
 	font-size: 120%;
 	color:#cc0000;
@@ -493,7 +486,6 @@ div.Ovalbox {
 }
 hr.line {
 	display: inline-block;
-	
 }
 
 /* Spaces */
@@ -776,15 +768,6 @@ span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
 * binomials, vertical braces, stackrel, fonts and colors.
 */
 
-ul > ul.lis_ani > li > a:hover{
-	background-color: #EEEEEE;
-	text-decoration: none;
-}
-ul > ul.lis_ani {
-	list-style: none;
-	display: block;
-}
-
 /* Inline binomials */
 span.binom {
 	display: inline-block;
@@ -1015,12 +998,6 @@ table.environment {
 table.environment tr td {
 	padding: 0 1em;
 }
-
-/* Testing section */
-a.brand{
-	padding-top: 10px;
-	color: #CCCCCC;
-}
 /*
 * CSS section for print.
 */
@@ -1032,7 +1009,13 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
+/*#globalWrapper {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: #ffffff;
+	line-height: 1.5em;
+}*/
 span.FootOuter .Foot {
 	display: block;
 	position: relative;
@@ -1068,6 +1051,3 @@ a:visited {
 }
 /* end of print CSS */
 }
-
-
-
